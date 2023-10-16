@@ -1,24 +1,32 @@
 import React, { useState } from "react";
-
+import AddCircleIcon from '@mui/icons-material/AddCircle';
 
 function ToDo(props) {
     const [content, setContent] = useState("");
 
+    // update the value of input if there is any change
     function handleInput(event) {
-        console.log(event.target.value);
         setContent(event.target.value);
     }
 
+    // add the todo task to the array if the add button  is clicked and the input is not empty
     function addItem(event) {
-        props.addItem(content);
-        setContent("");
+        if (content !== ""){
+            props.addItem(content);
+            setContent("");
+        }
+        
         event.preventDefault();
     }
 
      
     return    <form>
-            <input onInput={handleInput} name="todo" placeholder="add your task" value={content}></input>
-            <button onClick={addItem}>Add</button>
+            <input className="todo-input" onInput={handleInput} name="todo" placeholder="add your task" value={content}></input>
+            {/* <AddCircleIcon onClick={addItem}>
+            
+            </AddCircleIcon> */}
+            <button className="todo-btn" onClick={addItem}>Add</button>
+            
         </form>;
 }
 

@@ -9,7 +9,7 @@ function Header() {
         </a>
 
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-          <li><a href="#" class="nav-link px-2 text-white">Home</a></li>
+          <li><a href="/" class="nav-link px-2 text-white">Home</a></li>
           {/* <li><a href="#" class="nav-link px-2 text-white">Features</a></li>
           <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
           <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li> */}
@@ -21,8 +21,8 @@ function Header() {
         </form> */}
 
         <div class="text-end">
-          <button type="button" class="btn btn-outline-light me-2">Login</button>
-          <button type="button" class="btn btn-warning">Sign-up</button>
+          <button type="button" class="btn btn-outline-light me-2"><a href="/Login">Login</a></button>
+          <button type="button" class="btn btn-warning"><a href="/Signup">Sign-up</a></button>
         </div>
       </div>
     </div>
